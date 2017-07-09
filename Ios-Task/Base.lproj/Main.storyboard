@@ -168,17 +168,12 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9sB-VM-dbJ">
-                                <rect key="frame" x="266" y="379" width="69" height="39"/>
+                                <rect key="frame" x="266" y="392" width="69" height="39"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <state key="normal" title="Cancel"/>
                                 <connections>
                                     <action selector="cancel:" destination="l1S-0V-geA" eventType="touchUpInside" id="kNj-qR-DlJ"/>
                                 </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xUg-5n-THM">
-                                <rect key="frame" x="260" y="332" width="81" height="39"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                <state key="normal" title="Register"/>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KQH-Q9-4na">
                                 <rect key="frame" x="46" y="99" width="107" height="27"/>
@@ -186,6 +181,27 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="drm-7S-8ew">
+                                <rect key="frame" x="371" y="306" width="202" height="29"/>
+                                <segments>
+                                    <segment title="Male"/>
+                                    <segment title="Female"/>
+                                </segments>
+                            </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gender" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tdC-EN-Vfz">
+                                <rect key="frame" x="46" y="304" width="73" height="27"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xUg-5n-THM">
+                                <rect key="frame" x="260" y="345" width="81" height="39"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <state key="normal" title="Register"/>
+                                <connections>
+                                    <action selector="reg:" destination="l1S-0V-geA" eventType="touchUpInside" id="soJ-Jb-LbE"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -199,8 +215,11 @@
                             <constraint firstItem="2XL-2w-j9j" firstAttribute="leading" secondItem="w1W-37-4jU" secondAttribute="leadingMargin" constant="26" id="Dwo-EU-7kS"/>
                             <constraint firstItem="9sB-VM-dbJ" firstAttribute="centerX" secondItem="w1W-37-4jU" secondAttribute="centerX" id="EaM-ig-p2C"/>
                             <constraint firstItem="KQH-Q9-4na" firstAttribute="top" secondItem="2XL-2w-j9j" secondAttribute="bottom" constant="26" id="HqI-P5-lJS"/>
-                            <constraint firstItem="xUg-5n-THM" firstAttribute="top" secondItem="B9K-gx-HSw" secondAttribute="bottom" constant="42" id="MEz-7I-ymo"/>
+                            <constraint firstItem="drm-7S-8ew" firstAttribute="trailing" secondItem="B9K-gx-HSw" secondAttribute="trailing" id="KDF-na-tsm"/>
+                            <constraint firstItem="xUg-5n-THM" firstAttribute="top" secondItem="B9K-gx-HSw" secondAttribute="bottom" constant="55" id="MEz-7I-ymo"/>
+                            <constraint firstItem="drm-7S-8ew" firstAttribute="baseline" secondItem="tdC-EN-Vfz" secondAttribute="baseline" id="NVc-2c-34e"/>
                             <constraint firstItem="B9K-gx-HSw" firstAttribute="leading" secondItem="YXC-wK-xC9" secondAttribute="leading" id="RX2-Fl-nJa"/>
+                            <constraint firstItem="drm-7S-8ew" firstAttribute="leading" secondItem="B9K-gx-HSw" secondAttribute="leading" id="UmC-rD-lMq"/>
                             <constraint firstItem="VYS-0w-Mp3" firstAttribute="leading" secondItem="YXC-wK-xC9" secondAttribute="leading" id="XBN-TJ-k1e"/>
                             <constraint firstItem="hOw-HJ-9uW" firstAttribute="baseline" secondItem="nQk-Ob-ROQ" secondAttribute="baseline" id="bMf-Ar-d95"/>
                             <constraint firstItem="51K-hb-617" firstAttribute="leading" secondItem="2XL-2w-j9j" secondAttribute="leading" id="bNM-Ie-lJR"/>
@@ -209,12 +228,22 @@
                             <constraint firstItem="ZjV-3S-oHg" firstAttribute="leading" secondItem="YXC-wK-xC9" secondAttribute="leading" id="p0N-Ss-uWA"/>
                             <constraint firstItem="hOw-HJ-9uW" firstAttribute="leading" secondItem="YXC-wK-xC9" secondAttribute="leading" id="qtk-2m-T7d"/>
                             <constraint firstItem="nQk-Ob-ROQ" firstAttribute="top" secondItem="KQH-Q9-4na" secondAttribute="bottom" constant="26" id="rR9-cU-qvf"/>
+                            <constraint firstItem="tdC-EN-Vfz" firstAttribute="top" secondItem="51K-hb-617" secondAttribute="bottom" constant="19" id="rYY-3E-a3b"/>
                             <constraint firstItem="ZjV-3S-oHg" firstAttribute="baseline" secondItem="FxB-Wr-ivU" secondAttribute="baseline" id="roo-De-idi"/>
                             <constraint firstItem="FxB-Wr-ivU" firstAttribute="leading" secondItem="2XL-2w-j9j" secondAttribute="leading" id="sJX-Ao-eY2"/>
                             <constraint firstItem="xUg-5n-THM" firstAttribute="centerX" secondItem="w1W-37-4jU" secondAttribute="centerX" id="v3I-nG-cLe"/>
+                            <constraint firstItem="tdC-EN-Vfz" firstAttribute="leading" secondItem="51K-hb-617" secondAttribute="leading" id="x6A-SO-dbl"/>
                             <constraint firstItem="51K-hb-617" firstAttribute="top" secondItem="FxB-Wr-ivU" secondAttribute="bottom" constant="26" id="ygv-B0-HGY"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="email" destination="ZjV-3S-oHg" id="zZB-ec-bUQ"/>
+                        <outlet property="gender" destination="drm-7S-8ew" id="XKi-S3-3Ax"/>
+                        <outlet property="mobile" destination="B9K-gx-HSw" id="fMX-kU-Vkc"/>
+                        <outlet property="name" destination="YXC-wK-xC9" id="L3y-RK-goG"/>
+                        <outlet property="pass" destination="hOw-HJ-9uW" id="2lF-3J-ZTT"/>
+                        <outlet property="username" destination="VYS-0w-Mp3" id="W3n-eH-Eng"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="u5H-uR-qax" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
