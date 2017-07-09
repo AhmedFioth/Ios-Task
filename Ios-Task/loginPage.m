@@ -16,7 +16,6 @@
 @property (weak, nonatomic) IBOutlet UITextField *usernameOutlet;
 @property (weak, nonatomic) IBOutlet UITextField *passOutlet;
 
-@property (weak, nonatomic) IBOutlet UILabel *errorLabel;
 @end
 
 @implementation loginPage
@@ -34,8 +33,7 @@
                                                  name:@"errorResponse"
                                                object:nil];
 }
-//
-//http://www.smartpan.com.sa:5551/AndriodAPI/login?username=asd&password=123
+
 
 - (IBAction)login:(id)sender {
     NSString * urlstring =[NSString stringWithFormat:@"%@%@%@=%@&%@=%@",api_baseUrl,api_login,api_username,self.usernameOutlet.text,api_password,self.passOutlet.text];
@@ -62,12 +60,14 @@
 }
 
 -(void)errorResponse{
-    NSLog(@"here error");
+    dispatch_async(dispatch_get_main_queue(), ^{
+
 
     UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Error" message:@"something happened , please try again" preferredStyle:UIAlertControllerStyleAlert];
     UIAlertAction *okbtn = [UIAlertAction actionWithTitle:@"ok" style:UIAlertActionStyleDefault handler:nil ];
     [alert addAction:okbtn];
-    
-    [self.parentViewController presentViewController:alert animated:YES completion:nil];
-}
+    [self presentViewController:alert animated:YES completion:nil];
+     
+         });
+    }
 @end

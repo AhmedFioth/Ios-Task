@@ -55,12 +55,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S9S-E0-ett">
-                                <rect key="frame" x="145" y="422" width="270" height="51"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sXA-hp-yjF">
                                 <rect key="frame" x="398" y="139" width="170" height="30"/>
                                 <constraints>
@@ -89,7 +83,6 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="errorLabel" destination="S9S-E0-ett" id="sRg-bA-sMK"/>
                         <outlet property="passOutlet" destination="sXA-hp-yjF" id="7ef-nQ-dJs"/>
                         <outlet property="usernameOutlet" destination="RHq-nB-uT5" id="lbS-7r-lEY"/>
                     </connections>
